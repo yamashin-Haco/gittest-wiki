@@ -1,0 +1,137 @@
+/* 全体設定 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f8fa;
+    color: #24292e;
+}
+
+header, footer {
+    background-color: #24292e;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    border-bottom: 1px solid #e1e4e8;
+    padding-bottom: 0.5rem;
+}
+
+/* 設定セクション */
+#settings form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    align-items: center;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #e1e4e8;
+}
+
+#settings label {
+    font-weight: 600;
+    text-align: right;
+}
+
+#settings input[type="text"],
+#settings input[type="password"],
+#settings input[type="number"] {
+    padding: 8px 12px;
+    border: 1px solid #d1d5da;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* paddingを含めてwidthを100%にする */
+}
+
+#settings button {
+    grid-column: 2 / 3; /* 2列目に配置 */
+    justify-self: start; /* 左寄せ */
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#settings button:hover {
+    background-color: #218838;
+}
+
+/* プロジェクト表示エリア */
+#project-container {
+    margin-top: 2rem;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #e1e4e8;
+    display: none; /* 初期状態では非表示 */
+}
+
+#chart-container {
+    max-width: 400px;
+    margin: 1rem auto;
+}
+
+#projectBoard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project-column {
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    padding: 1rem;
+    border: 1px solid #e1e4e8;
+}
+
+.project-column h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #e1e4e8;
+    padding-bottom: 0.5rem;
+}
+
+.task-card {
+    background-color: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.task-card p {
+    margin: 0 0 0.5rem 0;
+}
+
+.task-card .assignee {
+    font-style: italic;
+    color: #586069;
+}
+
+.task-card .labels span {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    margin: 0.2em;
+    font-size: 0.8em;
+    font-weight: 600;
+    border-radius: 2em;
+    color: #fff;
+}
