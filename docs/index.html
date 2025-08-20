@@ -3,48 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Project Status</title>
+    <title>Wiki Viewer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>GitHubプロジェクト進捗ビューア</h1>
-    </header>
-
-    <main>
-        <section id="settings">
-            <h2>設定</h2>
-            <form id="repoForm">
-                <label for="pat">Personal Access Token:</label>
-                <input type="password" id="pat" name="pat" required placeholder="ghp_... or github_pat_...">
-
-                <label for="owner">リポジトリ所有者:</label>
-                <input type="text" id="owner" name="owner" required placeholder="例: octocat">
-
-                <label for="repo">リポジトリ名:</label>
-                <input type="text" id="repo" name="repo" required placeholder="例: Hello-World">
-
-                <label for="projectNumber">プロジェクト番号:</label>
-                <input type="number" id="projectNumber" name="projectNumber" required placeholder="例: 1">
-
-                <button type="submit">プロジェクト情報を取得</button>
-            </form>
-        </section>
-
-        <section id="project-container">
-            <h2 id="project-title"></h2>
-            <div id="chart-container">
-                <canvas id="progressChart"></canvas>
-            </div>
-            <div id="projectBoard"></div>
-        </section>
-    </main>
-
-    <footer>
-        <p>Powered by Gemini</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
+    <div class="wiki-container">
+        <nav id="wiki-nav">
+            <h2>Wiki Pages</h2>
+            <ul id="wiki-menu"></ul>
+        </nav>
+        <main id="wiki-content">
+            <p>左のメニューからページを選択してください。</p>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="wiki.js"></script>
 </body>
 </html>
