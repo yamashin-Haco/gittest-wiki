@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         try {
-            const response = await fetch(`../gittest-wiki.wiki/${pageName}.md`);
+            const response = await fetch(`./wiki/${pageName}.md`);
             if (!response.ok) {
                 throw new Error('ページの読み込みに失敗しました。');
             }
